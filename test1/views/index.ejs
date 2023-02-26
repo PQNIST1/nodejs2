@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Classes</title>
+</head>
+<body>
+  <h1>Classes</h1>
+
+  <a href="/add">Add a Class</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Class Id</th>
+        <th>Class Name</th>
+        <th>NumStudent</th>
+        <th>teacherId</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% classes.forEach(function(classItem) { %>
+        <tr>
+            <td><%= classItem.ClasId %></td>
+            <td><%= classItem.ClassName %></td>
+            <td><%= classItem.NumStudent %></td>
+            <td><%= classItem.teacherId %></td>
+            <td>
+              <a href="/edit/<%= classItem._id %>">Edit</a>
+              <a href="/delete/<%= classItem._id %>">Delete</a>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+</body>
+</html>      

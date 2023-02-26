@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Edit <%= classs.ClasId %></title>
+</head>
+<body>
+  <h1>Edit <%= classs.ClasId %></h1>
+
+  <form action="/edit/<%= classs._id %>" method="POST">
+    <div>
+      <label for="name">ClasId:</label>
+      <input type="text" id="name" name="name" value="<%= classs.ClasId %>">
+    </div>
+
+    <div>
+      <label for="">ClassName:</label>
+      <input type="text" id="class" name="class" value="<%= classs.ClassName %>">
+    </div>
+
+    <div>
+      <label for="student">Numstudent:</label>
+      <input type="text" id="student" name="student" value="<%= classs.NumStudent %>">
+    </div>
+
+    <div>
+      <label for="teacher">teacherId:</label>
+      <input type="text" id="teacher" name="teacher" value="<%= classs.teacherId %>">
+    </div>
+
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
